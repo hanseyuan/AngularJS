@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--数据绑定-->
+        <!--
+            <div ng-app="myApp1">
+                <h2>价格计算器</h2>
+                数量: <input type="text" ng-model="count">
+                单价: <input type="text" ng-model="price">
+                <br>
+                总价: {{count * price}}
+            </div>
+          -->
+    <!--重复 HTML 元素-->
+    <!--
+        <div ng-app="myApp2" ng-init="names=['Jani','Hege','Kai']">
+            <p>使用ng-repeat来循环数组</p>
+            <ul>
+                <li ng-repeat="x in names">{{ x }}</li>
+            </ul>
+        </div>
+      -->
+    <!--
+        <div ng-app="myApp2" ng-init="names=[
+    {name:'Jani',country:'Norway'},
+    {name:'Hege',country:'Sweden'},
+    {name:'Kai',country:'Denmark'}]">
+            <p>使用ng-repeat来循环数组</p>
+            <ul>
+                <li ng-repeat="x in names">{{ x.name + ', ' + x.country }}</li>
+            </ul>
+        </div>
+     -->
+
+    <div ng-app="myApp" ng-controller="myCtrl" >
+
+    </div>
+
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <script>
+        //var  app1=angular.module("myApp1",[]);
+        var  app2=angular.module("myApp2",[]);
+        var  app=angular.module("myApp",[]);
+        app.controller("myCtrl",function ($scope) {
+
+        })
+    </script>
+
+</body>
+</html>
